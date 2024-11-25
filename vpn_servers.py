@@ -54,7 +54,7 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     
     filtered_list = []
     for z in index:
-        if load_list[y] <= max_load:
+        if load_list[z] <= max_load:
             filtered_list.append()
 
     # load list is list of ALL server load values (parallel array)
