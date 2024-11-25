@@ -27,6 +27,11 @@ server_tier = []
 for x in range(len(servers_list)):
     server_tier.append(servers_list[x]['Tier'])
 
+# Compile all server features values into single list
+server_features = []
+for x in range(len(servers_list)):
+    server_features.append(servers_list[x]['Features'])
+
     
 def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     draw = 0
