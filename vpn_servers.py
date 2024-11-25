@@ -67,7 +67,7 @@ def convert_features(features = 1):
     
     return error, secure_core, netshield, streaming, port_forward
 
-def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
+def find_a_server(location = 'US', num_results = 5, max_load = 30):
     draw = 0
     # Look for servers in given location
     index = []
