@@ -72,12 +72,19 @@ def convert_features(features = 1):
     
     return error, secure_core, netshield, streaming, port_forward
 
-def find_a_server(location = 'US', num_results = 5, max_load = 30):
+def find_a_server(country_code = "US", state_code = "" num_results = 5, max_load = 30):
+
+    # decide what string to search for
+    if state_code == "":
+        search_for = country_code + "-"
+    else:
+        search_for = country_code + "-" + state_code + "#"
+
     draw = 0
     # Look for servers in given location
     index = []
     for i,x in enumerate(server_names):
-        if location in x:
+        if search_for in x:
             index.append(i)
 
     # Look for tier 1 and 2 servers in given location
