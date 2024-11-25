@@ -69,7 +69,7 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         the_hostname = server_hostnames[i]
         the_load = load_list[i]
         the_tier = server_tier[i]
-        print("Server[" + i + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier))
+        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier))
 
 
     #print(index)
