@@ -114,7 +114,7 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         if port_forward:
             addstr += " port_forward: True"
         if error:
-            addstr += " error parsing features"
+            addstr += " error parsing features, features = " + server_features[i]
 
         print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
