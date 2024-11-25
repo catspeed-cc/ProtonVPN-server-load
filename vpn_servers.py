@@ -17,6 +17,11 @@ server_hostnames = []
 for x in range(len(servers_list)):
     server_hostnames.append(servers_list[x]['Domain'])
 
+# Compile all server hostnames into single list
+server_cities = []
+for x in range(len(servers_list)):
+    server_cities.append(servers_list[x]['City'])
+
 # Compile all server load values into single list
 server_load = []
 for x in range(len(servers_list)):
@@ -108,6 +113,7 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
         # display each server in the list
         the_server = server_names[i]
         the_hostname = server_hostnames[i]
+        the_city = server_cities[i]
         the_load = server_load[i]
         the_tier = server_tier[i]
         error, secure_core, netshield, streaming, port_forward = convert_features(server_features[i])
@@ -124,5 +130,5 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
         if error:
             addstr += " error parsing features, features = " + str(server_features[i])
 
-        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
+        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " City: " + the_city + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
