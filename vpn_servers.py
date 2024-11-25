@@ -115,11 +115,15 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
     # reorder by server load
     filtered_list_max_index = len(filtered_list)
 
-    # loop from 1 to filtered_list_max_index
-    for x in range(filtered_list_max_index, 1, -1):
+    # loop from max_load to 1 stepping by -1
+    temp = []
+    for x in range(max_load, 1, -1):
         # loop over list checking load
         for y in filtered_list:
-            #if server_load[y] <= 
+            if server_load[y] == x 
+                temp.append(y)
+
+    print(temp)
 
     for i in filtered_list:
         # display each server in the list
