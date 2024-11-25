@@ -52,21 +52,22 @@ def find_a_server_in(location = 'US', num_results = 5):
     for y in index:
         load_list.append(server_load[y])
     
-    #filtered_list = []
-    #for z in index:
-        #filtered_list.append()
+    filtered_list = []
+    for z in index:
+        if load_list[y] <= max_load:
+            filtered_list.append()
 
     # load list is list of ALL server load values (parallel array)
     #print(load_list)
 
-    print(index)
+    #print(index)
     #print(temp)
     #print(server_names)
     #print(server_load)
     #print(server_tier)
 
     #print(index)
-    #print(filtered_list)
+    print(filtered_list)
     #print(index[index_lowest])
 
     # Get index of lowest load
