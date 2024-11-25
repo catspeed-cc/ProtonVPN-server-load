@@ -59,6 +59,7 @@ def find_a_server_in(location):
     #print(server_tier)
 
     #print(index)
+    #print(filtered_list)
     #print(index[index_lowest])
 
     # Get index of lowest load
@@ -73,6 +74,9 @@ def find_a_server_in(location):
     else:
         print("error getting len(filtered_list)")
         print(filtered_list)
+
+    print(index_lowest)
+    print(filtered_list)
 
     # Get the name of the server with lowest load
     the_server = server_names[filtered_list[index_lowest]]
