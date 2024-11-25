@@ -71,8 +71,8 @@ def find_a_server_in(location):
     # Get the name of the server with lowest load
     the_server = server_names[index[index_lowest]]
     the_hostname = server_hostnames[index[index_lowest]]
-    the_load = load_list[index_lowest]
-    the_tier = server_tier[index_lowest]
+    the_load = load_list[index[index_lowest]]
+    the_tier = server_tier[index[index_lowest]]
 
     print("Server: " + the_server + " Hostname:" + the_hostname + " Load:" + str(the_load) + "% Tier:" + str(the_tier))
     
@@ -80,8 +80,8 @@ def find_a_server_in(location):
     if draw == 1:
         the_server_2 = server_names[index[index_lowest_2]]
         the_hostname_2 = server_hostnames[index[index_lowest_2]]
-        the_load_2 = load_list[index_lowest_2]
-        the_tier_2 = server_tier[index_lowest_2]
+        the_load_2 = load_list[index[index_lowest_2]]
+        the_tier_2 = server_tier[index[index_lowest_2]]
         
         print("Server: " + the_server_2 + " Hostname:" + the_hostname_2 + " Load:" + str(the_load_2) + "% Tier:" + str(the_tier_2))
 
