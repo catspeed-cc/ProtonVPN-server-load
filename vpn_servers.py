@@ -32,7 +32,35 @@ server_features = []
 for x in range(len(servers_list)):
     server_features.append(servers_list[x]['Features'])
 
+def convert_features(features = 1)
+    error = False
+
+    if (features >= 20)
+        features = features - 20
+        port_forward = True
+    else
+        port_forward = False
+
+    if (features >= 8)
+        features = features - 20
+        streaming = True
+    else
+        streaming = False
+
+    if (features > 1)
+        features = features - 1
+        secure_core = True
+    else
+        secure_core = False
+
+    # sanity check, features should now equal 0
+    if (features = 0)
+        error = False
+    else
+        error = True
     
+    return error, secure_core, streaming, port_forward
+
 def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     draw = 0
     # Look for servers in given location
@@ -76,7 +104,20 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         the_hostname = server_hostnames[i]
         the_load = server_load[i]
         the_tier = server_tier[i]
-        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier))
+        error, secure_core, streaming, port_forward = convert_features(server_features[i])
+        
+        addstr = ""
+        if !error
+            if secure_core
+                addstr += " secure_core: True"
+            if streaming
+                addstr += " streaming: True"
+            if port_forward
+                addstr += " port_forward: True"
+        else
+            addstr += " error parsing features"
+
+        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
     #print(index)
     #print(temp)
