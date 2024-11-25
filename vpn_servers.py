@@ -70,7 +70,7 @@ def find_a_server_in(location):
         draw = 1
         index_lowest_2 = filtered_list[1]
         index_lowest = filtered_list[0]
-    else
+    else:
         print("error getting len(filtered_list)")
         print(filtered_list)
 
