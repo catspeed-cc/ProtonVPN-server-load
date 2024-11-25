@@ -44,8 +44,6 @@ def find_a_server_in(location):
         if server_tier[i] == 2:
             temp.append(i)
 
-    filtered_list = temp
-
     # Compile list of server load values
     # for tier 1 and 2 servers in given location
     load_list = []
@@ -61,6 +59,8 @@ def find_a_server_in(location):
     #print(index)
     #print(filtered_list)
     #print(index[index_lowest])
+
+    filtered_list = temp
 
     # Get index of lowest load
     filtered_list = [i for i, j in enumerate(load_list) if j == min(load_list)]
