@@ -68,8 +68,8 @@ def find_a_server_in(location):
     #print(server_load)
     #print(server_tier)
 
-    print(index)
-    print(index[index_lowest])
+    #print(index)
+    #print(index[index_lowest])
 
     # Get the name of the server with lowest load
     the_server = server_names[index[index_lowest]]
