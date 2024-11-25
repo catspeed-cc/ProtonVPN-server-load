@@ -110,7 +110,7 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
             filtered_list.append(i)
 
     # filtered_list is list of all tier 1 & 2 servers under max_load value
-    print(filtered_list)
+    #print(filtered_list)
 
     # reorder by server load
     filtered_list_max_index = len(filtered_list)
@@ -123,7 +123,7 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
             if server_load[y] == x:
                 temp.append(y)
 
-    print(temp)
+    #print(temp)
 
     filtered_list = temp
 
