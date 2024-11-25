@@ -107,7 +107,7 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         error, secure_core, streaming, port_forward = convert_features(server_features[i])
         
         addstr = ""
-        if !error:
+        if not error:
             if secure_core:
                 addstr += " secure_core: True"
             if streaming:
