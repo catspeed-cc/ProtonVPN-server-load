@@ -67,10 +67,11 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         # display each server in the list
         the_server = server_names[i]
         the_hostname = server_hostnames[i]
-        the_load = load_list[i]
+        the_load = server_load[i]
         the_tier = server_tier[i]
         print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier))
 
+    print ("THE END")
 
     #print(index)
     #print(temp)
@@ -79,7 +80,7 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     #print(server_tier)
 
     #print(index)
-    print(filtered_list)
+    #print(filtered_list)
     #print(index[index_lowest])
 
     # Get index of lowest load
