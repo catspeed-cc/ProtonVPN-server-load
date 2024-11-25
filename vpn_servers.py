@@ -4,6 +4,7 @@ import requests
 response = requests.get('https://api.protonmail.ch/vpn/logicals')
 servers_dict = json.loads(response.text)
 
+print(response.text)
 
 # Get rid of the LogicalServers wrapper
 servers_list = servers_dict['LogicalServers']
