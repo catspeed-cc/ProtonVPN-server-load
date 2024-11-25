@@ -96,5 +96,5 @@ def find_a_server_in(location):
         print("Server: " + the_server_2 + " Hostname: " + the_hostname_2 + " Load: " + str(the_load_2) + "% Tier: " + str(the_tier_2))
 
 
-# testing the function 
+# testing the function
 find_a_server_in("US")
