@@ -126,8 +126,3 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
 
         print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
-
-
-
-# testing the function
-find_a_server_in(location = "US", num_results = 5, max_load = 40)
