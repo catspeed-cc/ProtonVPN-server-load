@@ -12,6 +12,11 @@ server_names = []
 for x in range(len(servers_list)):
     server_names.append(servers_list[x]['Name'])
 
+# Compile all server hostnames into single list
+server_hostnames = []
+for x in range(len(servers_list)):
+    server_names.append(servers_list[x]['Domain'])
+
 # Compile all server load values into single list
 server_load = []
 for x in range(len(servers_list)):
@@ -28,7 +33,7 @@ def find_a_server_in(location):
     # Look for servers in given location
     index = []
     for i,x in enumerate(server_names):
-        if location in x and "-" not in x:
+        if location in x:
             index.append(i)
 
     # Look for tier 1 and 2 servers in given location
@@ -57,19 +62,28 @@ def find_a_server_in(location):
         index_lowest_2 = index_lowest[1]
         index_lowest = index_lowest[0]
     
-    # Get the name of the server with lowest load
-    ideal_server = server_names[index[index_lowest]]
-    lowest_load = load_list[index_lowest]
-    ideal_tier = server_tier[index_lowest]
+    #print(index)
+    #print(temp)
+    #print(server_names)
+    #print(server_load)
+    #print(server_tier)
 
-    print(ideal_server + ": " + str(lowest_load) + "% Tier:" + str(ideal_tier))
+    # Get the name of the server with lowest load
+    the_server = server_names[index[index_lowest]]
+    the_hostname = server_hostnames[index[index_lowest]]
+    the_load = load_list[index_lowest]
+    the_tier = server_tier[index_lowest]
+
+    print("Server name: " + the_server + " / " + the_hostname + ": " + str(the_load) + "% Tier:" + str(the_tier))
     
     # If there's a draw, print out the other contending server
     if draw == 1:
-        ideal_server_2 = server_names[index[index_lowest_2]]
-        lowest_load_2 = load_list[index_lowest_2]
-        ideal_tier_2 = server_tier[index_lowest_2]
-        print(ideal_server_2 + ": " + str(lowest_load_2) + "% Tier:" + str(ideal_tier_2))
+        the_server_2 = server_names[index[index_lowest_2]]
+        the_hostname_2 = server_hostnames[index[index_lowest_2]]
+        the_load_2 = load_list[index_lowest_2]
+        the_tier_2 = server_tier[index_lowest_2]
+        
+        print("Server name: " + the_server_2 + " / " + the_hostname_2 + ": " + str(the_load_2) + "% Tier:" + str(the_tier_2))
 
 
 # testing the function
