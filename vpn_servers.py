@@ -32,7 +32,7 @@ server_features = []
 for x in range(len(servers_list)):
     server_features.append(servers_list[x]['Features'])
 
-def convert_features(features = 1)
+def convert_features(features = 1):
     error = False
 
     if (features >= 20)
