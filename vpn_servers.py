@@ -72,7 +72,7 @@ def convert_features(features = 1):
     
     return error, secure_core, netshield, streaming, port_forward
 
-def find_a_server(country_code = "US", state_code = "" num_results = 5, max_load = 30):
+def find_a_server(country_code = "US", state_code = "", num_results = 5, max_load = 30):
 
     # decide what string to search for
     if state_code == "":
