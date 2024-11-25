@@ -4,8 +4,6 @@ import requests
 response = requests.get('https://api.protonmail.ch/vpn/logicals')
 servers_dict = json.loads(response.text)
 
-print(response.text)
-
 # Get rid of the LogicalServers wrapper
 servers_list = servers_dict['LogicalServers']
 
@@ -49,7 +47,6 @@ def find_a_server_in(location):
     for y in index:
         load_list.append(server_load[y])
 
-
     # Get index of lowest load
     index_lowest = [i for i, j in enumerate(load_list) if j == min(load_list)]
 
@@ -65,12 +62,15 @@ def find_a_server_in(location):
     lowest_load = load_list[index_lowest]
     ideal_tier = server_tier[index_lowest]
 
-    print(ideal_server + ": "+ str(lowest_load) + "% Tier:" + str(server_tier))
+    print(ideal_server + ": " + str(lowest_load) + "% Tier:" + str(ideal_tier))
     
     # If there's a draw, print out the other contending server
     if draw == 1:
         ideal_server_2 = server_names[index[index_lowest_2]]
         lowest_load_2 = load_list[index_lowest_2]
-        ideal_tier_2 = server_tier[index_lowest]
-        print(ideal_server_2 + ": "+ str(lowest_load_2) + "% Tier:" + str(server_tier))
-#
+        ideal_tier_2 = server_tier[index_lowest_2]
+        print(ideal_server_2 + ": " + str(lowest_load_2) + "% Tier:" + str(ideal_tier_2))
+
+
+# testing the function
+find_a_server_in("US")
