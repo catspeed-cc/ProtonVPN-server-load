@@ -46,19 +46,31 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
 
     index = temp
 
+    # index is list of all tier 1 & 2 servers
+    #print(index)
+
     # Compile list of server load values
     # for tier 1 and 2 servers in given location
     load_list = []
     for i in index:
         load_list.append(server_load[i])
 
-    # load list is list of ALL server load values (parallel array)
-    print(load_list)
+    # load list is list of all tier 1 & 2 servers load values
+    #print(load_list)
     
     filtered_list = []
     for i in index:
         if server_load[i] <= max_load:
             filtered_list.append(i)
+
+    for i in filtered_list:
+        # display each server in the list
+        the_server = server_names[i]
+        the_hostname = server_hostnames[i]
+        the_load = load_list[i]
+        the_tier = server_tier[i]
+        print("Server[" + i + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier))
+
 
     #print(index)
     #print(temp)
