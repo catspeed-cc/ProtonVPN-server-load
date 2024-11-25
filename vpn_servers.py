@@ -42,7 +42,7 @@ def convert_features(features = 1):
         port_forward = False
 
     if (features >= 8):
-        features = features - 20
+        features = features - 8
         streaming = True
     else:
         streaming = False
