@@ -75,6 +75,7 @@ def find_a_server_in(location):
         print("error getting len(filtered_list)")
         print(filtered_list)
 
+    print(min(load_list))
     print(index_lowest)
     print(filtered_list)
 
