@@ -54,7 +54,7 @@ def convert_features(features = 1):
         secure_core = False
 
     # sanity check, features should now equal 0
-    if (features = 0):
+    if (features == 0):
         error = False
     else:
         error = True
@@ -107,14 +107,14 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         error, secure_core, streaming, port_forward = convert_features(server_features[i])
         
         addstr = ""
-        if !error
-            if secure_core
+        if !error:
+            if secure_core:
                 addstr += " secure_core: True"
-            if streaming
+            if streaming:
                 addstr += " streaming: True"
-            if port_forward
+            if port_forward:
                 addstr += " port_forward: True"
-        else
+        else:
             addstr += " error parsing features"
 
         print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
