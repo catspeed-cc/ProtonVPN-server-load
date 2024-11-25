@@ -74,7 +74,7 @@ def find_a_server_in(location):
     the_load = load_list[index_lowest]
     the_tier = server_tier[index_lowest]
 
-    print("Server name: " + the_server + " / " + the_hostname + ": " + str(the_load) + "% Tier:" + str(the_tier))
+    print("Server: " + the_server + " Hostname:" + the_hostname + " Load:" + str(the_load) + "% Tier:" + str(the_tier))
     
     # If there's a draw, print out the other contending server
     if draw == 1:
@@ -83,7 +83,7 @@ def find_a_server_in(location):
         the_load_2 = load_list[index_lowest_2]
         the_tier_2 = server_tier[index_lowest_2]
         
-        print("Server name: " + the_server_2 + " / " + the_hostname_2 + ": " + str(the_load_2) + "% Tier:" + str(the_tier_2))
+        print("Server: " + the_server_2 + " Hostname:" + the_hostname_2 + " Load:" + str(the_load_2) + "% Tier:" + str(the_tier_2))
 
 
 # testing the function
