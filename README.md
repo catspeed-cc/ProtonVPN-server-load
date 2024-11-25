@@ -1,10 +1,14 @@
 # ProtonVPN-server-load
 
-Alternative to checking https://protonvpn.com/vpn-servers everytime you want to connect to a ProtonVPN server
+Script to print out all servers under the desired maximum load
 
-Uses the ProtonVPN API [here](https://api.protonmail.ch/vpn/logicals)
+Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
 
-Servers are restricted based on your plan (free, basic, plus), which corresponds to the Tier value of each server. Tier 0 is free, Tier 1 is basic, Tier 2 is plus. This script looks for servers in both Tier 1 and 2, but you can easily edit it at lines 37 to 41
+Uses the ProtonVPN API [https://api.protonmail.ch/vpn/logicals](https://api.protonmail.ch/vpn/logicals)
+
+Servers are restricted based on your plan (free, basic, plus), which corresponds to the Tier value of each server. Tier 0 is free, Tier 1 is basic, Tier 2 is plus.
+
+This documentation will be updated when work is complete.
 
 ## Usage:
 
