@@ -47,6 +47,12 @@ def convert_features(features = 1):
     else:
         streaming = False
 
+    if (features >= 3):
+        features = features - 3
+        netshield = True
+    else:
+        netshield = False
+
     if (features >= 1):
         features = features - 1
         secure_core = True
@@ -59,7 +65,7 @@ def convert_features(features = 1):
     else:
         error = True
     
-    return error, secure_core, streaming, port_forward
+    return error, secure_core, netshield, streaming, port_forward
 
 def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     draw = 0
@@ -104,11 +110,13 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
         the_hostname = server_hostnames[i]
         the_load = server_load[i]
         the_tier = server_tier[i]
-        error, secure_core, streaming, port_forward = convert_features(server_features[i])
+        error, secure_core, netshield, streaming, port_forward = convert_features(server_features[i])
         
         addstr = ""
         if secure_core:
             addstr += " secure_core: True"
+        if netshield:
+            addstr += " netshield: True"
         if streaming:
             addstr += " streaming: True"
         if port_forward:
