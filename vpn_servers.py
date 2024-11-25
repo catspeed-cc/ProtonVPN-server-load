@@ -126,18 +126,8 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
 
         print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
-    #print(index)
-    #print(temp)
-    #print(server_names)
-    #print(server_load)
-    #print(server_tier)
-
-    #print(index)
-    #print(filtered_list)
-    #print(index[index_lowest])
-
 
 
 
 # testing the function
-find_a_server_in(location = "US", num_results = 5, max_load = 100)
+find_a_server_in(location = "US", num_results = 5, max_load = 30)
