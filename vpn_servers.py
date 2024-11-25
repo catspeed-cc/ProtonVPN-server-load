@@ -116,8 +116,9 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
     filtered_list_max_index = len(filtered_list) - 1
 
     # loop from 1 to filtered_list_max_index
-    
+    for x in range(1, filtered_list_max_index):
         # loop over list checking load
+        
 
     for i in filtered_list:
         # display each server in the list
