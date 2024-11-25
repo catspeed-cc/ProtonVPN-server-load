@@ -148,5 +148,5 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
         if error:
             addstr += " error parsing features, features = " + str(server_features[i])
 
-        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " City: " + the_city + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
+        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " City: " + str(the_city) + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
 
