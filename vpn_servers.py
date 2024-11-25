@@ -35,28 +35,28 @@ for x in range(len(servers_list)):
 def convert_features(features = 1):
     error = False
 
-    if (features >= 20)
+    if (features >= 20):
         features = features - 20
         port_forward = True
-    else
+    else:
         port_forward = False
 
-    if (features >= 8)
+    if (features >= 8):
         features = features - 20
         streaming = True
-    else
+    else:
         streaming = False
 
-    if (features > 1)
+    if (features > 1):
         features = features - 1
         secure_core = True
-    else
+    else:
         secure_core = False
 
     # sanity check, features should now equal 0
-    if (features = 0)
+    if (features = 0):
         error = False
-    else
+    else:
         error = True
     
     return error, secure_core, streaming, port_forward
