@@ -39,6 +39,8 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     # Look for tier 1 and 2 servers in given location
     temp = []
     for i in index:
+        if server_tier[i] == 0:
+            temp.append(i)
         if server_tier[i] == 1:
             temp.append(i)
         if server_tier[i] == 2:
@@ -85,4 +87,4 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
 
 
 # testing the function
-find_a_server_in(location = "US", num_results = 5, max_load = 75)
+find_a_server_in(location = "US", num_results = 5, max_load = 90)
