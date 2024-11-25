@@ -28,7 +28,7 @@ for x in range(len(servers_list)):
     server_tier.append(servers_list[x]['Tier'])
 
     
-def find_a_server_in(location = 'US', num_results = 5):
+def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
     draw = 0
     # Look for servers in given location
     index = []
@@ -106,4 +106,4 @@ def find_a_server_in(location = 'US', num_results = 5):
 
 
 # testing the function
-find_a_server_in(location = "US", num_results = 5)
+find_a_server_in(location = "US", num_results = 5, max_load = 30)
