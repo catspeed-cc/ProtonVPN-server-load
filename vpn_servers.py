@@ -125,6 +125,8 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
 
     print(temp)
 
+    filtered_list = temp
+
     for i in filtered_list:
         # display each server in the list
         the_server = server_names[i]
