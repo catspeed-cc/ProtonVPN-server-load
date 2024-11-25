@@ -51,9 +51,6 @@ def find_a_server_in(location):
     load_list = []
     for y in index:
         load_list.append(server_load[y])
-
-    # Get index of lowest load
-    index_lowest = [i for i, j in enumerate(load_list) if j == min(load_list)]
     
     #print(index)
     #print(temp)
@@ -63,6 +60,9 @@ def find_a_server_in(location):
 
     #print(index)
     #print(index[index_lowest])
+
+    # Get index of lowest load
+    index_lowest = [i for i, j in enumerate(load_list) if j == min(load_list)]
 
     if len(index_lowest) == 1:
         index_lowest = index_lowest[0]
