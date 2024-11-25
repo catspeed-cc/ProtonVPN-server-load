@@ -120,7 +120,7 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
     for x in range(max_load, 1, -1):
         # loop over list checking load
         for y in filtered_list:
-            if server_load[y] == x 
+            if server_load[y] == x:
                 temp.append(y)
 
     print(temp)
