@@ -114,7 +114,6 @@ def find_a_server(location = 'US', num_results = 5, max_load = 30):
 
     # reorder by server load
     filtered_list_max_index = len(filtered_list)
-
     # loop from max_load to 1 stepping by -1
     temp = []
     for x in range(max_load, 1, -1):
