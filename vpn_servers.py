@@ -82,9 +82,9 @@ def find_a_server_in(location = 'US', num_results = 5):
         print("error getting len(filtered_list)")
         print(filtered_list)
 
-    print(min(load_list))
-    print(index_lowest)
-    print(filtered_list)
+    #print(min(load_list))
+    #print(index_lowest)
+    #print(filtered_list)
 
     # Get the name of the server with lowest load
     the_server = server_names[index[index_lowest]]
@@ -105,4 +105,4 @@ def find_a_server_in(location = 'US', num_results = 5):
 
 
 # testing the function
-find_a_server_in("US")
+find_a_server_in(location = "US", num_results = 5)
