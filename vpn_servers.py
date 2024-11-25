@@ -130,4 +130,4 @@ def find_a_server_in(location = 'US', num_results = 5, max_load = 30):
 
 
 # testing the function
-find_a_server_in(location = "US", num_results = 5, max_load = 30)
+find_a_server_in(location = "US", num_results = 5, max_load = 40)
