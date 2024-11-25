@@ -15,7 +15,7 @@ for x in range(len(servers_list)):
 # Compile all server hostnames into single list
 server_hostnames = []
 for x in range(len(servers_list)):
-    server_names.append(servers_list[x]['Domain'])
+    server_hostnames.append(servers_list[x]['Domain'])
 
 # Compile all server load values into single list
 server_load = []
