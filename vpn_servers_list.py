@@ -7,4 +7,4 @@ import vpn_servers as vpns
 # If searching only by 2 letter country code, you must include the - at the end.
 # This is to prevent finding states when you want countries.
 #
-vpns.find_a_server(location = "CA-", num_results = 5, max_load = 40)
+vpns.find_a_server(location = "CA", num_results = 5, max_load = 40)
