@@ -49,7 +49,7 @@ def find_a_server_in(location):
     # Compile list of server load values
     # for tier 1 and 2 servers in given location
     load_list = []
-    for y in filtered_list:
+    for y in index:
         load_list.append(server_load[y])
     
     #print(index)
