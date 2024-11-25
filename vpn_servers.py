@@ -44,7 +44,7 @@ def find_a_server_in(location):
         if server_tier[i] == 2:
             temp.append(i)
 
-    index = temp
+    filtered_list = temp
 
     # Compile list of server load values
     # for tier 1 and 2 servers in given location
@@ -62,18 +62,18 @@ def find_a_server_in(location):
     #print(index[index_lowest])
 
     # Get index of lowest load
-    index_lowest = [i for i, j in enumerate(load_list) if j == min(load_list)]
+    filtered_list = [i for i, j in enumerate(load_list) if j == min(load_list)]
 
-    if len(index_lowest) == 1:
-        index_lowest = index_lowest[0]
-    elif len(index_lowest) > 1:
+    if len(filtered_list) == 1:
+        index_lowest = filtered_list[0]
+    elif len(filtered_list) > 1:
         draw = 1
-        index_lowest_2 = index_lowest[1]
-        index_lowest = index_lowest[0]
+        index_lowest_2 = filtered_list[1]
+        index_lowest = filtered_list[0]
 
     # Get the name of the server with lowest load
-    the_server = server_names[index[index_lowest]]
-    the_hostname = server_hostnames[index[index_lowest]]
+    the_server = server_names[filtered_list[index_lowest]]
+    the_hostname = server_hostnames[filtered_list[index_lowest]]
     the_load = load_list[index_lowest]
     the_tier = server_tier[index_lowest]
 
@@ -81,8 +81,8 @@ def find_a_server_in(location):
     
     # If there's a draw, print out the other contending server
     if draw == 1:
-        the_server_2 = server_names[index[index_lowest_2]]
-        the_hostname_2 = server_hostnames[index[index_lowest_2]]
+        the_server_2 = server_names[filtered_list[index_lowest_2]]
+        the_hostname_2 = server_hostnames[filtered_list[index_lowest_2]]
         the_load_2 = load_list[index_lowest_2]
         the_tier_2 = server_tier[index_lowest_2]
         
