@@ -52,8 +52,14 @@ def find_a_server_in(location = 'US', num_results = 5):
     for y in index:
         load_list.append(server_load[y])
     
-    print(load_list)
-    #print(index)
+    #filtered_list = []
+    #for z in index:
+        #filtered_list.append()
+
+    # load list is list of ALL server load values (parallel array)
+    #print(load_list)
+
+    print(index)
     #print(temp)
     #print(server_names)
     #print(server_load)
