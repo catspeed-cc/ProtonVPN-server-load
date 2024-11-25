@@ -47,7 +47,7 @@ def convert_features(features = 1):
     else:
         streaming = False
 
-    if (features > 1):
+    if (features >= 1):
         features = features - 1
         secure_core = True
     else:
