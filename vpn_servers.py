@@ -1,6 +1,7 @@
 import json
 import requests
 import country_converter as coco
+cc = coco.CountryConverter()
 
 response = requests.get('https://vpn-api.proton.me/vpn/logicals')
 servers_dict = json.loads(response.text)
@@ -166,7 +167,7 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         else:
             the_state = "null"
 
-        the_country = the_server[0:2]
+        the_country = cc.convert(names = the_server[0:2], to = 'name_short')
 
         print("THE COUNTRY: " + the_country + " THE_STATE: " + the_state)
 
