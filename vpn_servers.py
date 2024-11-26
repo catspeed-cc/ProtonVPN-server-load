@@ -158,7 +158,12 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         the_city = server_cities[i]
         the_load = server_load[i]
         the_tier = server_tier[i]
+
         error, secure_core, netshield, streaming, port_forward = convert_features(server_features[i])
+
+        entry_ip = server_servers[15][0]['EntryIP']
+        exit_ip = server_servers[15][0]['ExitIP']
+        pub_key = server_servers[15][0]['X25519PublicKey']
         
         addstr = ""
         if secure_core:
