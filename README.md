@@ -8,7 +8,7 @@ Uses the ProtonVPN API [https://api.protonmail.ch/vpn/logicals](https://api.prot
 
 Currently the script is only able to get Tier 2 servers because those are the only servers the API is listing. I am trying to figure out how to get Tier 0 (free) and Tier 1 (basic) servers.
 
-It will sort the list from highest to lowest, so the lowest load shows at the bottom.
+It will sort the list from highest to lowest load, so the lowest load shows at the bottom.
 
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.<br />
 **Note:** I am going to try either outputting ovpn config files, or a servers.json for use with gluetun (probably the latter, because generating configs would be lots more work)
