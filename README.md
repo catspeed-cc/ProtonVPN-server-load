@@ -12,6 +12,7 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 
 It will sort the list from highest to lowest load, so the lowest load shows at the bottom.
 
+**Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
 
 This documentation will be updated when work is complete.
