@@ -173,6 +173,9 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         the_long = servers_list[i]['Location']['Long']
 
         #print("Lat: " + str(the_lat) + " Long:" + str(the_long))
+
+        if len(server_servers[i]) > 1:
+            print("server_servers: " + str(len(server_servers)) + " server_servers[]" + str(len(server_servers[i])))
         
         addstr = ""
         if secure_core:
