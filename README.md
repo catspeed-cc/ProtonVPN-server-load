@@ -11,7 +11,7 @@ Currently the script is only able to get Tier 2 servers because those are the on
 It will sort the list from highest to lowest, so the lowest load shows at the bottom.
 
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.<br />
-**Note:** I am going to try either outputting ovpn configuration files, or a servers.json for use with gluetun (probably the latter, because generating configs would be lots more work)
+**Note:** I am going to try either outputting ovpn config files, or a servers.json for use with gluetun (probably the latter, because generating configs would be lots more work)
 
 This documentation will be updated when work is complete.
 
