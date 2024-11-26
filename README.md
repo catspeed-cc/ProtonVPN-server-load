@@ -6,7 +6,7 @@ Uses the ProtonVPN API [https://vpn-api.proton.me/vpn/logicals](https://vpn-api.
 
 Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
 
-I am going to try either outputting ovpn config files, or a servers.json for use with gluetun. Probably the latter, because generating configs would be lots more work. I only need this to generate config for gluetun so a servers.json for gluetun might be all that I do. If you wish to see it generate also config files, please let me know by creating an issue ticket https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load/issues
+I am going to try either outputting ovpn config files, or a servers.json for use with gluetun. Probably the latter, because generating configs would be lots more work. I only need this to generate config for gluetun so a servers.json for gluetun might be all that I do. If you wish to see it generate also wg/openvpn config files, please let me know by creating an issue ticket https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load/issues
 
 It will sort the list from highest to lowest load, so the lowest load shows at the bottom.
 
