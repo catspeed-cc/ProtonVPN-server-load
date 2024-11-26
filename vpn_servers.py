@@ -165,8 +165,14 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         exit_ip = server_servers[i][0]['ExitIP']
         pub_key = server_servers[i][0]['X25519PublicKey']
 
+        print(entry_ip)
+        print(exit_ip)
+        print(pub_key)
+
         the_lat = servers_list[i]['Location']['Lat']
         the_long = servers_list[i]['Location']['Long']
+
+        print("Lat: " + str(the_lat) + " Long:" + str(the_long))
         
         addstr = ""
         if secure_core:
