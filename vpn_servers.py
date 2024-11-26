@@ -166,7 +166,7 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         else:
             the_state = "null"
 
-        the_country = the_server[0:1]
+        the_country = the_server[0:2]
 
         print("THE COUNTRY: " + the_country + " THE_STATE: " + the_state)
 
