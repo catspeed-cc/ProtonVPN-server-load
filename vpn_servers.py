@@ -42,7 +42,7 @@ server_servers = []
 for x in range(len(servers_list)):
     server_servers.append(servers_list[x]['Servers'])
 
-print(server_servers[15]['ExitIP'])
+print(server_servers[15][ExitIP])
 
 def convert_features(features = 1):
     error = False
