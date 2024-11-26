@@ -2,9 +2,9 @@
 
 Script to print out all servers under the desired maximum load
 
-Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
-
 Uses the ProtonVPN API [https://vpn-api.proton.me/vpn/logicals](https://vpn-api.proton.me/vpn/logicals)
+
+Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
 
 Currently the script is only able to get Tier 2 servers because those are the only servers the API is listing. I am trying to figure out how to get Tier 0 (free) and Tier 1 (basic) servers.
 
