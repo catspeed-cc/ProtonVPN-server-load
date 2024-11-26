@@ -1,5 +1,6 @@
 import json
 import requests
+import country_converter as coco
 
 response = requests.get('https://vpn-api.proton.me/vpn/logicals')
 servers_dict = json.loads(response.text)
