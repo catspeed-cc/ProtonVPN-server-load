@@ -1,7 +1,7 @@
 import json
 import requests
 
-response = requests.get('https://api.protonmail.ch/vpn/logicals')
+response = requests.get('https://vpn-api.proton.me/vpn/logicals')
 servers_dict = json.loads(response.text)
 
 # Get rid of the LogicalServers wrapper
