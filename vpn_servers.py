@@ -123,17 +123,12 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     load_list = []
     for i in index:
         load_list.append(server_load[i])
-
-    # load_list is list of all tier 1 & 2 servers load values
-    #print(load_list)
     
+    # filter the list to only have servers with loads under max_load
     filtered_list = []
     for i in index:
         if server_load[i] <= max_load:
             filtered_list.append(i)
-
-    # filtered_list is list of all tier 1 & 2 servers under max_load value
-    #print(filtered_list)
 
     # reorder by server load
     filtered_list_max_index = len(filtered_list)
@@ -145,12 +140,9 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
             if server_load[y] == x:
                 temp.append(y)
 
-    #print(temp)
-
     filtered_list = temp
 
-    #print(server_servers[15][0]['EntryIP'])
-
+    # loop through the filtered list and extract values
     for i in filtered_list:
         # display each server in the list
         the_server = server_names[i]
@@ -165,14 +157,8 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         exit_ip = server_servers[i][0]['ExitIP']
         pub_key = server_servers[i][0]['X25519PublicKey']
 
-        #print(entry_ip)
-        #print(exit_ip)
-        #print(pub_key)
-
         the_lat = servers_list[i]['Location']['Lat']
         the_long = servers_list[i]['Location']['Long']
-
-        #print("Lat: " + str(the_lat) + " Long:" + str(the_long))
 
         if len(server_servers[i]) > 1:
             print("WARN: len(server_servers[]) = " + str(len(server_servers[i])) + "! Expected 1!")
