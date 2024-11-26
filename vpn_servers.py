@@ -165,14 +165,14 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         exit_ip = server_servers[i][0]['ExitIP']
         pub_key = server_servers[i][0]['X25519PublicKey']
 
-        print(entry_ip)
-        print(exit_ip)
-        print(pub_key)
+        #print(entry_ip)
+        #print(exit_ip)
+        #print(pub_key)
 
         the_lat = servers_list[i]['Location']['Lat']
         the_long = servers_list[i]['Location']['Long']
 
-        print("Lat: " + str(the_lat) + " Long:" + str(the_long))
+        #print("Lat: " + str(the_lat) + " Long:" + str(the_long))
         
         addstr = ""
         if secure_core:
@@ -186,5 +186,5 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         if error:
             addstr += " error parsing features, features = " + str(server_features[i])
 
-        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " City: " + str(the_city) + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + addstr)
+        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " City: " + str(the_city) + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + " Entry: " + entry_ip + " Exit: " + exit_ip + " Lat: " + str(the_lat) + "  Long: " + str(the_long) + " PubKey: " + pub_key + addstr)
 
