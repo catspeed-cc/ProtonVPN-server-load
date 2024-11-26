@@ -165,8 +165,8 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
 
         # get the state
         if the_server.find("-") > 0:
-            the_state = the_server[the_server.find("-")+len("-"):the_server.rfind("#")]
-            
+            #the_state = the_server[the_server.find("-")+len("-"):the_server.rfind("#")]
+            the_state = pycountry.subdivisions.get(code=the_server[0:5]).name
         else:
             the_state = "null"
         
