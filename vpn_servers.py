@@ -167,6 +167,7 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
             the_state = "null"
 
         the_country = the_server[0:2]
+        the_country = pycountry.countries.get(alpha_2=the_country).name
 
         print("THE COUNTRY: " + the_country + " THE_STATE: " + the_state)
 
