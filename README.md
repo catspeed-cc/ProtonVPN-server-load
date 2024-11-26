@@ -61,4 +61,10 @@ vpns.find_a_server(country_code = "CA", state_code = "", max_load = 40, num_resu
 
 ```
 
-You can get the country codes [here](https://protonvpn.com/vpn-servers)
+You can get the country codes from:
+- https://en.wikipedia.org/wiki/ISO_3166-1
+
+You can get state/province codes from:
+- https://en.wikipedia.org/wiki/ISO_3166-2:US
+- https://en.wikipedia.org/wiki/ISO_3166-2:CA
+- you can change the country code on the end of the URL to get others
