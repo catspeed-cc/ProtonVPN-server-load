@@ -24,7 +24,7 @@ This documentation will be updated when work is complete.
 - ```cd ProtonVPN-server-load```
 - ```virtualenv venv```
 - ```source venv/bin/activate```
-- ```pip install requests country_converter --upgrade```
+- ```pip install requests pycountry --upgrade```
 - ```deactivate```
 
 
