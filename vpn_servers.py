@@ -94,7 +94,7 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         # Look for servers in given location
         index = []
         for i,x in enumerate(server_names):
-            if x.startswith(search_for):
+            if x.startswith(search_for_alt):
                 index.append(i)
 
 
