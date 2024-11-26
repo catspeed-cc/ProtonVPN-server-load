@@ -9,8 +9,8 @@ import vpn_servers as vpns
 # country_code & state_code if you see servers with state codes (Ex. US-CA#151)
 #
 print("US-CA# servers:")
-vpns.find_a_server(country_code = "US", state_code = "CA", max_load = 60, num_results = 5)
+vpns.find_a_server(country_code = "US", state_code = "CA", max_load = 40, num_results = 5)
 print("US-xx# servers:")
 vpns.find_a_server(country_code = "US", state_code = "", max_load = 40, num_results = 5)
 print("CA# servers:")
-vpns.find_a_server(country_code = "CA", state_code = "", max_load = 60, num_results = 5)
+vpns.find_a_server(country_code = "CA", state_code = "", max_load = 40, num_results = 5)
