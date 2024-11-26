@@ -148,7 +148,6 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         # display each server in the list
         the_server = server_names[i]
         the_hostname = server_hostnames[i]
-        the_city = server_cities[i]
         the_load = server_load[i]
         the_tier = server_tier[i]
 
@@ -161,13 +160,18 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         the_lat = servers_list[i]['Location']['Lat']
         the_long = servers_list[i]['Location']['Long']
 
+        # get the country
+        the_country = pycountry.countries.get(alpha_2=the_server[0:2]).name
+
+        # get the state
         if the_server.find("-") > 0:
             the_state = the_server[the_server.find("-")+len("-"):the_server.rfind("#")]
+            
         else:
             the_state = "null"
-
-        the_country = the_server[0:2]
-        the_country = pycountry.countries.get(alpha_2=the_country).name
+        
+        # moved here to keep it with country/state
+        the_city = server_cities[i]
 
         print("THE COUNTRY: " + the_country + " THE_STATE: " + the_state)
 
