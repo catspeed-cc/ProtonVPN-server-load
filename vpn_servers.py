@@ -166,7 +166,9 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         else:
             the_state = "null"
 
-        print("THE_STATE: " + the_state)
+        the_country = the_server[0:1]
+
+        print("THE COUNTRY: " + the_country + " THE_STATE: " + the_state)
 
         if len(server_servers[i]) > 1:
             print("WARN: len(server_servers[]) = " + str(len(server_servers[i])) + "! Expected 1!")
