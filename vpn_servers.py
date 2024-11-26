@@ -87,14 +87,14 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     # Look for servers in given location
     index = []
     for i,x in enumerate(server_names):
-        if x.startswith(search_for):
+        if search_for in x:
             index.append(i)
 
     if country_only and len(index) == 0:
         # Look for servers in given location
         index = []
         for i,x in enumerate(server_names):
-            if search_for_alt in x:
+            if x.startswith(search_for):
                 index.append(i)
 
 
