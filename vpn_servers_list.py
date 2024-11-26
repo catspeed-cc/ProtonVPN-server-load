@@ -1,16 +1,12 @@
 import vpn_servers as vpns
 
 #
-# We test by searching for location = "US-" servers under 40% load to get all United States servers
-# You could also search for location = "US-CO" for example, to get all Colorado, United States servers
+# You can pass in either only 2 letter country code, or 2 letter country code and 2 letter state code.
 #
-# If searching only by 2 letter country code, you must include the - at the end.
-# This is to prevent finding states when you want countries.
+# Note most countries do not have state_codes - or province codes - listed, ex. Canada, Chile, Germany, etc.
 #
-# In the case of searching for Canada servers, there appears to be no state/province code
-# Thus you should search for CA# instead
-#
-# You can search for the 2 letter country code with a - at the end, and if you get nothing, try it with a # at the end.
+# Easiest method is to try searching country code only, and then look at the results, and then search 
+# country_code & state_code if you see servers with state codes (Ex. US-CA#151)
 #
 print("US-CA# servers:")
 vpns.find_a_server(country_code = "US", state_code = "CA", max_load = 40, num_results = 5)
