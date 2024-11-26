@@ -11,6 +11,10 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 **Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
 
+- If you get too many results, lower max_load.
+- If you get too few or zero results, increase max_load
+- If still have issues, ensure that you are using the correct 2 character country code (or state_code)
+
 This documentation will be updated when work is complete.
 
 ## Usage:
