@@ -178,15 +178,15 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         
         addstr = ""
         if secure_core:
-            addstr += " secure_core: True"
+            addstr += " secure_core[True]"
         if netshield:
-            addstr += " netshield: True"
+            addstr += " netshield[True]"
         if streaming:
-            addstr += " streaming: True"
+            addstr += " streaming[True]"
         if port_forward:
-            addstr += " port_forward: True"
+            addstr += " port_forward[True]"
         if error:
             addstr += " error parsing features, features = " + str(server_features[i])
 
-        print("Server[" + str(i) + "]: " + the_server + " Hostname: " + the_hostname + " Country: " + str(the_country) + " State: " + str(the_state) + " City: " + str(the_city) + " Load: " + str(the_load) + "% Tier: " + str(the_tier) + " Entry: " + entry_ip + " Exit: " + exit_ip + " Lat: " + str(the_lat) + " Long: " + str(the_long) + " PubKey: " + pub_key + addstr)
+        print("Server[" + str(i) + "]: []" + the_server + "] Hostname[" + the_hostname + "] Country[" + str(the_country) + "] State[" + str(the_state) + "] City[" + str(the_city) + "] Load[" + str(the_load) + "%] Tier[" + str(the_tier) + "] Entry[" + entry_ip + "] Exit[" + exit_ip + "] Lat[" + str(the_lat) + "] Long[" + str(the_long) + "] PubKey[" + pub_key + "]" + addstr)
 
