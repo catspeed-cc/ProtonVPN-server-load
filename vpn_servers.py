@@ -77,8 +77,11 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     # decide what string to search for
     if state_code == "":
         search_for = country_code + "-"
+        search_for_alt = country_code + "#"
+        country_only = True
     else:
         search_for = country_code + "-" + state_code + "#"
+        country_only = False
 
     draw = 0
     # Look for servers in given location
@@ -86,6 +89,14 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     for i,x in enumerate(server_names):
         if search_for in x:
             index.append(i)
+
+    if country_only and len(index) == 0:
+        # Look for servers in given location
+        index = []
+        for i,x in enumerate(server_names):
+            if search_for_alt in x:
+                index.append(i)
+
 
     # Look for tier 1 and 2 servers in given location
     temp = []
