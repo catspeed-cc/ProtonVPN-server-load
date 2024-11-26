@@ -18,7 +18,7 @@ This documentation will be updated when work is complete.
 
 ## Usage:
 
-**in bash**:
+**in bash**: you will need to modify vpn_servers_list.py to get desired servers, then run the command:
 ```sh
 python vpn_servers_list.py
 >>> Server[33]: US-NJ#9 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
