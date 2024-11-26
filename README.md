@@ -13,7 +13,7 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 
 - If you get too many results, lower max_load.
 - If you get too few or zero results, increase max_load
-- If still have issues, ensure that you are using the correct 2 character country code (or state_code)
+- If still have issues, ensure that you are using the correct two letter country code (or state_code)
 
 This documentation will be updated when work is complete.
 
