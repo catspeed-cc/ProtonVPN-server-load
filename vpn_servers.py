@@ -147,7 +147,6 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     for i in filtered_list:
         # display each server in the list
         the_server = server_names[i]
-        the_state = the_server[the_server.find("-")+len("-"):the_server.rfind("#")]
         the_hostname = server_hostnames[i]
         the_city = server_cities[i]
         the_load = server_load[i]
@@ -161,6 +160,11 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
 
         the_lat = servers_list[i]['Location']['Lat']
         the_long = servers_list[i]['Location']['Long']
+
+        if the_server.find("-") > 0:
+            the_state = the_server[the_server.find("-")+len("-"):the_server.rfind("#")]
+        else:
+            the_state = "null"
 
         print("THE_STATE: " + the_state)
 
