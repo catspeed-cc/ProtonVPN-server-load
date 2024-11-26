@@ -2,7 +2,7 @@
 
 Script to print out all servers under the desired maximum load, sorted by load from highest to lowest.
 
-Uses the ProtonVPN API [https://vpn-api.proton.me/vpn/logicals](https://vpn-api.proton.me/vpn/logicals)
+Uses the ProtonVPN API [https://vpn-api.proton.me/vpn/logicals](https://vpn-api.proton.me/vpn/logicals) and pycountry python library [https://pypi.org/project/pycountry/](https://pypi.org/project/pycountry/)
 
 Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
 
