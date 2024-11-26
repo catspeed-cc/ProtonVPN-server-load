@@ -37,6 +37,13 @@ server_features = []
 for x in range(len(servers_list)):
     server_features.append(servers_list[x]['Features'])
 
+# Compile all servers into single list
+server_servers = []
+for x in range(len(servers_list)):
+    server_servers.append(servers_list[x]['Servers'])
+
+print(server_servers)
+
 def convert_features(features = 1):
     error = False
 
