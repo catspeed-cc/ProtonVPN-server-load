@@ -1,5 +1,6 @@
 # todo
 
+- deal with multiple server ip addresses
 - output to servers.json for gluetun
 - output to ovpn/wg configuration files
 - automatic fallback
