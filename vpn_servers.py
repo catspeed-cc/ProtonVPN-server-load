@@ -175,7 +175,7 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
         #print("Lat: " + str(the_lat) + " Long:" + str(the_long))
 
         if len(server_servers[i]) > 1:
-            print("WARN: server_servers[] = " + str(len(server_servers[i])) + " Expected 1")
+            print("WARN: len(server_servers[]) = " + str(len(server_servers[i])) + "! Expected 1!")
         
         addstr = ""
         if secure_core:
