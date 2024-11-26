@@ -19,8 +19,13 @@ This documentation will be updated when work is complete.
 ## Usage:
 
 **in bash**:
-```
+```sh
 python vpn_servers_list.py
+>>> Server[33]: US-NJ#9 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
+>>> Server[34]: US-NJ#10 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
+>>> Server[664]: US-CA#197 Hostname: node-us-168.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
+>>> Server[1263]: US-CA#321 Hostname: node-us-212.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
+
 ```
 
 OR
