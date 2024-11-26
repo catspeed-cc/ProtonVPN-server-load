@@ -17,11 +17,24 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 
 This documentation will be updated when work is complete.
 
+## Installation:
+
+- ```apt install python3 python3-full python3-pip python3-virtualenv```
+- ```git clone https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load```
+- ```cd ProtonVPN-server-load```
+- ```virtualenv venv```
+- ```source venv/bin/activate```
+- ```pip install requests country_converter --upgrade```
+- ```deactivate```
+
+
 ## Usage:
 
 **in bash**: you will need to modify vpn_servers_list.py to get desired servers, then run the command:
 ```sh
+source venv/bin/activate
 python vpn_servers_list.py
+deactivate
 >>> Server[33]: US-NJ#9 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
 >>> Server[34]: US-NJ#10 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
 >>> Server[664]: US-CA#197 Hostname: node-us-168.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
