@@ -42,8 +42,6 @@ server_servers = []
 for x in range(len(servers_list)):
     server_servers.append(servers_list[x]['Servers'])
 
-print(server_servers[15][0]['ExitIP'])
-
 def convert_features(features = 1):
     error = False
 
@@ -150,6 +148,8 @@ def find_a_server(country_code = "US", state_code = "", num_results = 5, max_loa
     #print(temp)
 
     filtered_list = temp
+
+    #print(server_servers[15][0]['EntryIP'])
 
     for i in filtered_list:
         # display each server in the list
