@@ -9,6 +9,10 @@ Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](h
 **Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
 
+# Github:
+
+This script would exist on GitHub, however my account https://github.com/mooleshacat is flagged and I can't do anything with my organization https://github.com/catspeed-cc/ either. This is affecting my ability to create forks and update code on github. I am still able to work on my Gitea, but github will not allow me to do anything until my account is unflagged. I am in contact with GitHub regarding this issue, but they have not yet responded 48 hours later. Unfortunately it may take a month for a response.
+
 ## Features:
 
 - Fetch Tier 2 servers from ProtonAPI
