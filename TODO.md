@@ -1,5 +1,6 @@
 # todo
 
+- cli parameters
 - cache api response for X minutes
 - deal with multiple server ip addresses
 - output to servers.json for gluetun
