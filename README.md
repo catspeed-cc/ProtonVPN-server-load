@@ -82,6 +82,8 @@ vpns.find_a_server(country_code = "CA", state_code = "", max_load = 40, num_resu
 >>> Server[3127]: CA#496 Hostname: node-ca-33.protonvpn.net City: Vancouver Load: 40% Tier: 2 secure_core: True netshield: True streaming: True
 ```
 
+## Country codes:
+
 You can get the country codes from:
 - https://en.wikipedia.org/wiki/ISO_3166-1
 
@@ -90,8 +92,9 @@ You can get state/province codes from:
 - https://en.wikipedia.org/wiki/ISO_3166-2:CA
 - you can change the country code on the end of the URL to get others
 
-## Troubleshooting
+## Troubleshooting:
 
 - If you get too many results, lower max_load.
 - If you get too few or zero results, increase max_load
 - If still have issues, ensure that you are using the correct two letter country_code (or state_code)
+- If there are still problems, please post an issue ticket https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load/issues
