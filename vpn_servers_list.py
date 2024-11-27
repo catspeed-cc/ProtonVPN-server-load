@@ -7,6 +7,8 @@ import vpn_servers as vpns
 #
 # It is best to search with a state/province code, because if no results are found, it will fall back to search country only
 #
+# If no results are found, try increasing max_load and check the API works https://vpn-api.proton.me/vpn/logicals
+#
 print("US-CA# servers:")
 vpns.find_a_server(country_code = "US", state_code = "CA", max_load = 40, num_results = 5)
 print("US-xx# servers:")
