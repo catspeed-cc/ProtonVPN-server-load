@@ -20,8 +20,8 @@ Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](h
 ## Requirements:
 
 - Python version 3.5+ (Debian 12 comes with 3.11.2)
-  - python3-requests (apt package or pip)
-  - python3-pycountry (apt package or pip)
+  - python3-requests (apt package) or requests (pip package)
+  - python3-pycountry (apt package) or pycountry (pip package)
 
 ## Installation:
 
