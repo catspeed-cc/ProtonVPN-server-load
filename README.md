@@ -11,24 +11,34 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 **Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
 
-- If you get too many results, lower max_load.
-- If you get too few or zero results, increase max_load
-- If still have issues, ensure that you are using the correct two letter country_code (or state_code)
-
 This documentation will be updated when work is complete.
 
 ## Requirements:
 
 - Python version 3.5+ (Debian 12 comes with 3.11.2)
-  - python3-requests (apt package)
-  - python3-pycountry (apt package)
+  - python3-requests (apt package or pip)
+  - python3-pycountry (apt package or pip)
 
 ## Installation:
 
+**Installation via APT (recommended):**
 - install packages ```apt install python3 python3-full python3-requests python3-pycountry```
 - check python version >= 3.5 ```python3 --version```
 - clone this repository ```git clone https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load```
-- change to repository directory ``cd ProtonVPN-server-load```
+- change to repository directory ```cd ProtonVPN-server-load```
+- run script ```python3 vpn_servers_list.py```
+
+**Installation via virtualenv:**
+- install packages ```apt install python3 python3-full```
+- clone this repository ```git clone https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load```
+- change to repository directory ```cd ProtonVPN-server-load```
+- create virtual environment ```virtualenv venv```
+- activate virtual environment ```source venv/bin/activate```
+- install dependencies ```pip install -r requirements.txt```
+- run script ```python3 vpn_servers_list.py```
+- deactivate virtual environment ```deactivate```
+
+#### Note: when using virtual environment it must be activated before running script
 
 ## Usage:
 
@@ -39,7 +49,6 @@ python3 vpn_servers_list.py
 >>> Server[34]: US-NJ#10 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
 >>> Server[664]: US-CA#197 Hostname: node-us-168.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
 >>> Server[1263]: US-CA#321 Hostname: node-us-212.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
-
 ```
 
 OR
@@ -71,7 +80,6 @@ vpns.find_a_server(country_code = "CA", state_code = "", max_load = 40, num_resu
 >>> Server[3121]: CA#490 Hostname: node-ca-33.protonvpn.net City: Vancouver Load: 40% Tier: 2 secure_core: True netshield: True streaming: True
 >>> Server[3122]: CA#491 Hostname: node-ca-33.protonvpn.net City: Vancouver Load: 40% Tier: 2 secure_core: True netshield: True streaming: True
 >>> Server[3127]: CA#496 Hostname: node-ca-33.protonvpn.net City: Vancouver Load: 40% Tier: 2 secure_core: True netshield: True streaming: True
-
 ```
 
 You can get the country codes from:
@@ -81,3 +89,9 @@ You can get state/province codes from:
 - https://en.wikipedia.org/wiki/ISO_3166-2:US
 - https://en.wikipedia.org/wiki/ISO_3166-2:CA
 - you can change the country code on the end of the URL to get others
+
+## Troubleshooting
+
+- If you get too many results, lower max_load.
+- If you get too few or zero results, increase max_load
+- If still have issues, ensure that you are using the correct two letter country_code (or state_code)
