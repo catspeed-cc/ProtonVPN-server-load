@@ -11,8 +11,6 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 **Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
 
-This documentation will be updated when work is complete.
-
 ## Requirements:
 
 - Python version 3.5+ (Debian 12 comes with 3.11.2)
