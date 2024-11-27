@@ -17,17 +17,24 @@ I am going to try either outputting ovpn config files, or a servers.json for use
 
 This documentation will be updated when work is complete.
 
+## Requirements:
+
+- Python version 3.5+ (Debian 12 comes with 3.11.2)
+  - python3-requests (apt package)
+  - python3-pycountry (apt package)
+
 ## Installation:
 
-- ```apt install python3 python3-full python3-requests python3-pycountry```
-- ```git clone https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load```
-- ```cd ProtonVPN-server-load```
+- install packages ```apt install python3 python3-full python3-requests python3-pycountry```
+- check python version >= 3.5 ```python3 --version```
+- clone this repository ```git clone https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load```
+- change to repository directory ``cd ProtonVPN-server-load```
 
 ## Usage:
 
 **in bash**: you will need to modify vpn_servers_list.py to get desired servers, then run the command:
 ```sh
-python vpn_servers_list.py
+python3 vpn_servers_list.py
 >>> Server[33]: US-NJ#9 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
 >>> Server[34]: US-NJ#10 Hostname: node-us-31.protonvpn.net City: Secaucus Load: 40% Tier: 2 secure_core: True netshield: True port_forward: True
 >>> Server[664]: US-CA#197 Hostname: node-us-168.protonvpn.net City: Los Angeles Load: 40% Tier: 2 streaming: True port_forward: True
