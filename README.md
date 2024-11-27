@@ -96,5 +96,6 @@ You can get state/province codes from:
 
 - If you get too many results, lower max_load.
 - If you get too few or zero results, increase max_load
-- If still have issues, ensure that you are using the correct two letter country_code (or state_code)
-- If there are still problems, please post an issue ticket https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load/issues
+- If there are still issues, ensure that you are using the correct two letter country_code (or state_code)
+- Check you can access the API and it is not blocked https://vpn-api.proton.me/vpn/logicals
+- If nothing above works, please post a ticket https://gitea.catspeed.cc/catspeed-cc/ProtonVPN-server-load/issues
