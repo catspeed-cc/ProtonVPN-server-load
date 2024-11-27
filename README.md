@@ -4,7 +4,7 @@ Script to print out all servers under the desired maximum load, sorted by load f
 
 Uses the ProtonVPN API [https://vpn-api.proton.me/vpn/logicals](https://vpn-api.proton.me/vpn/logicals)
 
-Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load), fixed, and heavily modified to suit my needs.
+Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](https://github.com/akazukin5151/ProtonVPN-server-load)
 
 **Note:** Currently script is only able to get Tier 2 (premium) servers. I am trying to find the API for Tiers 0 & 1.<br />
 **Note:** Currently num_results is not implemented. It will take minimal work to get it working.
@@ -20,6 +20,7 @@ I suspect this is either
 ## Features:
 
 - Fetch Tier 2 servers from ProtonAPI
+- Command line arguments (coming soon)
 - API response caching (coming soon)
 - Generate gluetun servers.json file (coming soon)
 - Generate wg/ovpn configuration files (coming soon)
