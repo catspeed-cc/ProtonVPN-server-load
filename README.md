@@ -11,10 +11,10 @@ Script was cloned from [https://github.com/akazukin5151/ProtonVPN-server-load](h
 
 ## Features:
 
-- Fetches Tier 2 servers from ProtonAPI
+- Fetch Tier 2 servers from ProtonAPI
 - API response caching (coming soon)
-- Generate wg/ovpn configuration files (coming soon)
 - Generate gluetun servers.json file (coming soon)
+- Generate wg/ovpn configuration files (coming soon)
 - Outputs server name, hostname, country, state/province, city, load, tier, entry/exit ip, lat/long, pubkey, features
 
 ## Requirements:
